@@ -28,10 +28,8 @@ namespace Towers.Cannon
             _rotationSpeed = data.RotationSpeed;
         }
 
-        protected override void UpdateBeforeAttack(float deltaTime, Monster monster)
-        {
+        protected override void UpdateBeforeAttack(float deltaTime, Monster monster) =>
             RotateTower(deltaTime, monster);
-        }
 
         private void RotateTower(float deltaTime, Monster monster)
         {
@@ -55,6 +53,7 @@ namespace Towers.Cannon
             cannon.Launch(direction);
         }
 
+        #region Get Data Methods
         private static float GetCannonSpeed(float cannonSpeed, float monsterSpeed)
         {
             if (cannonSpeed == monsterSpeed) return cannonSpeed + 0.1f;
@@ -91,5 +90,6 @@ namespace Towers.Cannon
             arrowSpeed.y = antiGravity + deltaY;
             return arrowSpeed;
         }
+        #endregion
     }
 }

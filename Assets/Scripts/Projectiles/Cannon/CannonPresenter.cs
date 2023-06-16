@@ -23,17 +23,9 @@ namespace Projectiles.Cannon
         #endregion
 
         #region Subscription View Methods
-        private void SubscribeView()
-        {
-            View.Launched += Model.Launch;
-            View.DamageMaking += OnDamageMaking;
-        }
+        private void SubscribeView() => View.DamageMaking += OnDamageMaking;
 
-        private void UnsubscribeView()
-        {
-            View.Launched -= Model.Launch;
-            View.DamageMaking -= OnDamageMaking;
-        }
+        private void UnsubscribeView() => View.DamageMaking -= OnDamageMaking;
         #endregion
         
         #region Subscription Model Methods

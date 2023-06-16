@@ -23,11 +23,9 @@ namespace MVP.Editor
             
                 foreach (var field in fields)
                 {
-                    if (!typeof(System.MulticastDelegate).IsAssignableFrom(field.FieldType))
-                    {
-                        var fieldValue = field.GetValue(model);
-                        EditorGUILayout.LabelField(field.Name, fieldValue != null ? fieldValue.ToString() : "null");
-                    }
+                    if (typeof(System.MulticastDelegate).IsAssignableFrom(field.FieldType)) continue;
+                    var fieldValue = field.GetValue(model);
+                    EditorGUILayout.LabelField(field.Name, fieldValue != null ? fieldValue.ToString() : "null");
                 }
             }
         }

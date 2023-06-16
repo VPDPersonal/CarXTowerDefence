@@ -15,8 +15,8 @@ namespace Towers
         #region Fields
         private float _timer;
         protected readonly ITarget shootPoint;
-        protected readonly MonsterDetector detector;
         protected readonly TransformModel transform;
+        private readonly MonsterDetector _detector;
         #endregion
 
         #region Properties
@@ -36,7 +36,7 @@ namespace Towers
             _timer = 0;
             this.transform = transform;
             this.shootPoint = shootPoint;
-            this.detector = detector;
+            this._detector = detector;
 
             AttackRadius = data.AttackRadius;
             ShootInterval = data.ShootInterval;
@@ -45,7 +45,7 @@ namespace Towers
         public void Update(float deltaTime)
         {
             _timer -= deltaTime;
-            if (detector.Monsters.Count <= 0) return;
+            if (_detector.Monsters.Count <= 0) return;
             
             var monster = GetNearestMonster();
             UpdateBeforeAttack(deltaTime, monster);
@@ -71,7 +71,7 @@ namespace Towers
         protected abstract void Shoot(Monster monster);
 
         private Monster GetNearestMonster() =>
-            detector.Monsters.OrderBy(monster => Vector3.Distance(monster.Transform.Position, shootPoint.Position)).First();
+            _detector.Monsters.OrderBy(monster => Vector3.Distance(monster.Transform.Position, shootPoint.Position)).First();
 
         private void ResetTimer() => _timer = ShootInterval;
     }

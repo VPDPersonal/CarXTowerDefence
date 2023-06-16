@@ -24,7 +24,7 @@ namespace Projectiles.Guided
         public void Move(float deltaTime)
         {
             if (IsDestroy) return;
-            
+
             _transform.Position = _movement.Move(_transform.Position, Speed * deltaTime);
             if (!_movement.CanMove) DestroyProjectile();
         }

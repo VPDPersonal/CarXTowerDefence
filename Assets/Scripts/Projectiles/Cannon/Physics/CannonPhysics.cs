@@ -9,7 +9,8 @@ namespace Projectiles.Cannon.Physics
         public event Action Collide;
         
         private Rigidbody _rigidbody;
-        
+
+        #region Properties
         private Rigidbody SelfRigidbody => 
             _rigidbody ? _rigidbody : _rigidbody = GetComponent<Rigidbody>();
 
@@ -24,13 +25,10 @@ namespace Projectiles.Cannon.Physics
             get => SelfRigidbody.angularVelocity;
             set => SelfRigidbody.angularVelocity = value;
         }
+        #endregion
 
-        public void AddForce(Vector3 force, ForceMode forceMode)
-        {
-            // SelfRigidbody.velocity = Vector3.zero;
-            SelfRigidbody.velocity = force;
-            // SelfRigidbody.AddForce(force, forceMode);
-        }
+        public void AddForce(Vector3 force, ForceMode forceMode) =>
+            SelfRigidbody.AddForce(force, forceMode);
 
         private void OnCollisionEnter(Collision other) =>
             Collide?.Invoke();

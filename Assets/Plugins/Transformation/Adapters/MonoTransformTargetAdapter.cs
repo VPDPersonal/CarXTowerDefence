@@ -9,10 +9,12 @@ namespace Transformation.Adapters
 			
         public MonoTransformTargetAdapter(Transform transform) => _transform = transform;
 
+        #region Properties
         public bool IsActive => _transform && _transform.gameObject.activeSelf;
 
         public Vector3 Position => _transform.position;
         
         public Quaternion Rotation => _transform.rotation;
+        #endregion
     }
 }
