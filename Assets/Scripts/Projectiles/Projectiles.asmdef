@@ -1,0 +1,4 @@
+{
+  "name": "Projectiles",
+  "references":[ "GUID:db08f794399d41429f0dc02cffa07d98", "GUID:acc4200c2cdb45bfb624503fabda9795", "GUID:6d9d3d1adafa42588c19364f777429e7", "GUID:006b72372aa94d7a847b9163e192bc71", "GUID:ad6ac9225e124b238b66c256cf4840bb", "GUID:8afb7352650d40e7a9b18335801f6382" ]
+}

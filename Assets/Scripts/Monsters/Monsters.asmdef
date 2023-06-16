@@ -1,0 +1,21 @@
+{
+    "name": "Monsters",
+    "rootNamespace": "",
+    "references": [
+        "GUID:867bc8f21481491a8a52b63a73dc4c4f",
+        "GUID:006b72372aa94d7a847b9163e192bc71",
+        "GUID:db08f794399d41429f0dc02cffa07d98",
+        "GUID:acc4200c2cdb45bfb624503fabda9795",
+        "GUID:8afb7352650d40e7a9b18335801f6382",
+        "GUID:c02b51ec054c844cc8f8584252aebf1c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
