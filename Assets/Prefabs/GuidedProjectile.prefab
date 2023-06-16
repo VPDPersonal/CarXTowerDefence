@@ -4852,8 +4852,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 469626}
-  - component: {fileID: 11496340}
   - component: {fileID: 13564084}
+  - component: {fileID: 1495768786471178811}
   m_Layer: 0
   m_Name: GuidedProjectile
   m_TagString: Untagged
@@ -4877,21 +4877,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11496340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ede9b13d3c9ba44e93b1288960ce0ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_target: {fileID: 0}
-  m_speed: 0.15
-  m_damage: 10
 --- !u!135 &13564084
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4913,3 +4898,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1495768786471178811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab88810a24c4dd6ab9e7a23c1ac2412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
